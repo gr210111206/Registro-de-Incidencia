@@ -87,7 +87,7 @@ CREATE TABLE `tb_historial_ticket` (
   CONSTRAINT `fk_historial_ticket_tb_prioridades1` FOREIGN KEY (`id_prioridad`) REFERENCES `tb_prioridades` (`id`),
   CONSTRAINT `fk_historial_ticket_tb_ticket1` FOREIGN KEY (`id_ticket`) REFERENCES `tb_ticket` (`id`),
   CONSTRAINT `fk_historial_ticket_tb_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`idusuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +96,7 @@ CREATE TABLE `tb_historial_ticket` (
 
 LOCK TABLES `tb_historial_ticket` WRITE;
 /*!40000 ALTER TABLE `tb_historial_ticket` DISABLE KEYS */;
+INSERT INTO `tb_historial_ticket` VALUES (1,1,1,'Ticket creado por Carlos P√©rez, pendiente de revisi√≥n','2025-09-23 13:25:52',1),(2,1,1,'El agente cambi√≥ el estado a En proceso','2025-09-23 13:25:52',2),(3,2,2,'Ticket creado por Ana G√≥mez con prioridad alta','2025-09-23 13:25:52',3),(4,2,1,'Agente asignado, revisando el problema','2025-09-23 13:25:52',4);
 /*!40000 ALTER TABLE `tb_historial_ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +178,7 @@ CREATE TABLE `tb_ticket` (
   CONSTRAINT `fk_Ticket_estados1` FOREIGN KEY (`id_status`) REFERENCES `tb_estados` (`id`),
   CONSTRAINT `fk_Ticket_prioridades1` FOREIGN KEY (`id_prioridad`) REFERENCES `tb_prioridades` (`id`),
   CONSTRAINT `fk_Ticket_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +187,7 @@ CREATE TABLE `tb_ticket` (
 
 LOCK TABLES `tb_ticket` WRITE;
 /*!40000 ALTER TABLE `tb_ticket` DISABLE KEYS */;
-INSERT INTO `tb_ticket` VALUES (1,'F1758172342681','2025-09-17 23:12:22',1,1,1,1,'1','1'),(2,'F1758172441671','2025-09-17 23:14:01',1,1,3,4,'2','2');
+INSERT INTO `tb_ticket` VALUES (1,'F1758172342681','2025-09-17 23:12:22',1,1,1,1,'1','1'),(2,'F1758172441671','2025-09-17 23:14:01',1,1,3,4,'2','2'),(3,'F1758656031337','2025-09-23 13:33:51',1,1,1,1,'12','prueva');
 /*!40000 ALTER TABLE `tb_ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -221,7 +222,7 @@ CREATE TABLE `tb_usuario` (
 
 LOCK TABLES `tb_usuario` WRITE;
 /*!40000 ALTER TABLE `tb_usuario` DISABLE KEYS */;
-INSERT INTO `tb_usuario` VALUES (1,'Carlos','Perez','Lopez','carlos.perez',_binary 'ŸÄLó\ÍfÒ\€$ˆñâJõÜP\Œp¢Ü¬≤ØE\€\–\—',1,0,1),(2,'Ana','Gomez',NULL,'ana.gomez',_binary 'la´ï\Àg\›	\ﬁV2≤R\Î≥r´éÉf	\ÿ0\«vê\Ô\È',2,0,2);
+INSERT INTO `tb_usuario` VALUES (1,'Carlos','Perez','Lopez','carlos.perez',_binary 'ŸÄLó\ÍfÒ\€$ˆñâJõÜP\Œp¢Ü¬≤ØE\€\–\—',1,0,1),(2,'Ana','Gomez',NULL,'ana.gomez',_binary 'la´ï\Àg\›	\ﬁV2≤R\Î≥r´éÉf	\ÿ0\«vê\Ô\È',3,0,2);
 /*!40000 ALTER TABLE `tb_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,4 +243,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-18 18:04:50
+-- Dump completed on 2025-09-26 13:02:21
