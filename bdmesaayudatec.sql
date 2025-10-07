@@ -178,7 +178,7 @@ CREATE TABLE `tb_ticket` (
   CONSTRAINT `fk_Ticket_estados1` FOREIGN KEY (`id_status`) REFERENCES `tb_estados` (`id`),
   CONSTRAINT `fk_Ticket_prioridades1` FOREIGN KEY (`id_prioridad`) REFERENCES `tb_prioridades` (`id`),
   CONSTRAINT `fk_Ticket_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `tb_ticket` (
 
 LOCK TABLES `tb_ticket` WRITE;
 /*!40000 ALTER TABLE `tb_ticket` DISABLE KEYS */;
-INSERT INTO `tb_ticket` VALUES (1,'F1758172342681','2025-09-17 23:12:22',1,1,1,1,'1','1'),(2,'F1758172441671','2025-09-17 23:14:01',1,1,3,4,'2','2'),(3,'F1758656031337','2025-09-23 13:33:51',1,1,1,1,'12','prueva');
+INSERT INTO `tb_ticket` VALUES (1,'F1758172342681','2025-09-17 23:12:22',1,1,1,1,'1','1'),(2,'F1758172441671','2025-09-17 23:14:01',1,1,3,4,'2','2'),(3,'F1758656031337','2025-09-23 13:33:51',1,1,1,1,'12','prueva'),(4,'F1759256405830','2025-09-30 12:20:05',1,1,2,3,'usuario administrador','Revicion 30 de septiembre');
 /*!40000 ALTER TABLE `tb_ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,4 +243,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-26 13:02:21
+-- Dump completed on 2025-10-07 11:38:13
